@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Builder</title>
+    <link rel = "stylesheet" href = "css/style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Section 1 of the form  -->
+      <form id="Form1">
+        <h3> Website Builder</h3>
+        <p> Please enter your Business name</p>
+        <input type="text" placeholder="Enter Business name" required>
+
+        <div class="btnbox">
+          <button type="button" id="Next1">Next</button>
+        </div>
+      </form>
+
+
+<!-- Section 2 of the form  -->
+      <form id="Form2">
+        <h3> Website Builder</h3>
+        <p> What industry is your business</p>
+        <div class="box">
+          <select>
+            <option>Accounting</option>
+            <option>Cafe</option>
+            <option>Cleaning</option>
+          </select>
+        </div>
+
+        <div class="btnbox">
+          <button type="button" id="Back1">Back</button>
+          <button type="button" id = "Next2">Next</button>
+        </div>
+      </form>
+
+<!-- Section 3 of the form  -->
+<form id="Form3">
+  <h3> Website Builder</h3>
+  <p> Tell us about your business.</p>
+  <div class="box">
+    <textarea placeholder="Tell us More about your business" style="width: 315px; height: 135px;" > </textarea>
+    <input type="text" placeholder="Email address (optional)" >
+    <input type="text" placeholder="Phone Number (optional)" >
+  </div>
+  <div class="btnbox">
+    <button type="button" id="Back2">Back</button>
+    <button type="button" id="Next3">Next</button>
+  </div>
+</form>
+
+<!-- Section 4 of the form  -->
+<form id="Form4">
+  <h3> Website Builder</h3>
+  <p> Select your color scheme </p>
+  <div class="box" style="margin-top: 25px;">
+
+    <div id = "image-layout">
+      <div class="page-option" data-page="home">
+          <img src="home.png" alt="Home" class="page-image">
+          <div class="checkmark"></div>
+          <label>Home</label>
+      </div>
+      <div class="page-option" data-page="gallery">
+          <img src="gallery.png" alt="Gallery" class="page-image">
+          <div class="checkmark"></div>
+          <label>Gallery</label>
+      </div>
+      <div class="page-option" data-page="contact">
+          <img src="contact.png" alt="Contact Us" class="page-image">
+          <div class="checkmark"></div>
+          <label>Contact Us</label>
+      </div>
+      </div>
+    
+</div>
+    <div class="box" style="margin-top: 25px;">
+      Select a font family.
+      <select>
+        <option>Serif font</option>
+        <option>Sans serif font</option>
+        <option>Rockwell font</option>
+      </select>
+    </div>
+
+  <div class="btnbox">
+    <button type="button" id="Back3">Back</button>
+    <button type="button" id="Next4">Next</button>
+  </div>
+</form>
+
+<!-- Section 4 of the form  -->
+
+<form id="Form5">
+  <h3>Website Builder</h3>
+  What pages Would you like to Show. (click on the pages you want)
+  <div id = "image-layout">
+  <div class="page-option" data-page="home">
+      <img src="home.png" alt="Home" class="page-image">
+      <div class="checkmark"></div>
+      <label>Home</label>
+  </div>
+  <div class="page-option" data-page="gallery">
+      <img src="gallery.png" alt="Gallery" class="page-image">
+      <div class="checkmark"></div>
+      <label>Gallery</label>
+  </div>
+  <div class="page-option" data-page="contact">
+      <img src="contact.png" alt="Contact Us" class="page-image">
+      <div class="checkmark"></div>
+      <label>Contact Us</label>
+  </div>
+  <div class="page-option" data-page="about">
+      <img src="about.png" alt="About Us" class="page-image">
+      <div class="checkmark"></div>
+      <label>About Us</label>
+  </div>
+  <div class="page-option" data-page="projects">
+      <img src="projects.png" alt="Projects" class="page-image">
+      <div class="checkmark"></div>
+      <label>Projects</label>
+  </div>
+</div>
+  <div class="btnbox">
+    <button type="button" id="Back4">Back</button>
+    <button type="submit" id="">Done</button>
+  </div>
+
+</form>
+
+
+ 
+
+
+<!-- we add a form step indicator at the top to show progress -->
+<div class="step-row">
+  <div id="progress"></div>
+  <div class="step-col"><small>Step 1</small></div>
+  <div class="step-col"><small>Step 2</small></div>
+  <div class="step-col"><small>Step 3</small></div>
+  <div class="step-col"><small>Step 4</small></div>
+  <div class="step-col"><small>Step 5</small></div>
+</div>
+  </div> 
+<script src="js/script.js" ></script>
+</body>
+</html>

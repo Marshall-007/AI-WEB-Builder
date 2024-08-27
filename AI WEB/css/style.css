@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{ 
+/* Here we set our background  */
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(bgImage.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+/* This is where the form will be contained (The white container cover) */
+.container{
+
+    width: 460px;
+    height: 500px;
+    margin: 8% auto;
+    margin-top: 10% auto;
+    background: #fff;
+    border-radius: 5px;
+    position: relative;
+overflow: hidden;
+
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 30px;
+    color: #000;
+
+}
+.container form{
+    width: 280px;
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    transition: 0.6s;
+    
+}
+form input{
+    width: 100%;
+    padding: 10px 5px;
+    margin:5px 0;
+    border: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+
+}
+::placeholder { 
+    color: #777;
+}
+
+.btnbox {
+
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+
+}
+form button{
+    width: 110px;
+    height: 35px;
+    margin: 0 10px;
+    background: linear-gradient(to right, #2834dd,#019c54);
+    border-radius: 30px;
+    border: 0;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+/*  Styleing for the Color scheme section of the code  */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  /*  This code is for Form 5 where we Select Pages to display.  */
+  #Form5{
+    left: 480px; 
+   
+}
+/* will need to change the name on this 1 For the last form */
+#image-layout{
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+    justify-content: center;
+   
+}
+
+.page-option {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.page-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-option label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 2px 0;
+    font-size: 10px;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid lightblue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.checkmark::before {
+    content: '✔';
+    color: lightblue;
+    font-size: 16px;
+}
+
+.page-option.selected .checkmark {
+    opacity: 1;
+}
+
+/* We will have to move all forms to the left so that
+they slide to the right as the user progresses*/
+
+#Form2{
+    left: 480px;
+}
+#Form3{
+    left: 480px;
+}
+
+#Form4{
+    left: 480px;
+}
+
+/*  This section is for the Progress bar at the top  */
+.step-row{
+    width: 460px;
+    height: 40px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 -1px 5px -1px #000;
+    position: relative;
+
+}
+
+/* for the progress bar Step col */
+
+.step-col{
+ width: 120px;
+ text-align: center;
+ color: #333;
+ position: relative;
+}
+
+#progress{
+    position: absolute;
+    height: 100%;
+    /* Here i uses 92 to divide the 460 into 5 parts. */
+    width: 92px;
+    background: linear-gradient(to right, #2833c1,#019c54);
+    transition: 1s;
+}
+#progress::after{
+    content: '';
+    height: 40px; /* Adjust to match your progress bar height */
+    width: 20px; /* Adjust for the round effect */
+    background-color: #019c54;
+    border-radius: 0 20px 20px 0; /* Rounds the right corners */
+    position: absolute;
+    left: 100%; /* Position it at the end of the progress bar */
+    top: 0;
+   
+
+}

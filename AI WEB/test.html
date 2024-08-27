@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Pages</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+#page-selection-form {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+    justify-content: center;
+}
+
+.page-option {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.page-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-option label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    text-align: center;
+    padding: 2px 0;
+    font-size: 10px;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid lightblue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.checkmark::before {
+    content: '✔';
+    color: lightblue;
+    font-size: 16px;
+}
+
+.page-option.selected .checkmark {
+    opacity: 1;
+}
+
+</style>
+<body>
+    <form id="page-selection-form">
+        <div class="page-option" data-page="home">
+            <img src="home.png" alt="Home" class="page-image">
+            <div class="checkmark"></div>
+            <label>Home</label>
+        </div>
+        <div class="page-option" data-page="gallery">
+            <img src="gallery.png" alt="Gallery" class="page-image">
+            <div class="checkmark"></div>
+            <label>Gallery</label>
+        </div>
+        <div class="page-option" data-page="contact">
+            <img src="contact.png" alt="Contact Us" class="page-image">
+            <div class="checkmark"></div>
+            <label>Contact Us</label>
+        </div>
+        <div class="page-option" data-page="about">
+            <img src="about.png" alt="About Us" class="page-image">
+            <div class="checkmark"></div>
+            <label>About Us</label>
+        </div>
+        <div class="page-option" data-page="projects">
+            <img src="projects.png" alt="Projects" class="page-image">
+            <div class="checkmark"></div>
+            <label>Projects</label>
+        </div>
+        <!-- Add more options as needed -->
+    </form>
+
+    
+    <script >
+
+document.querySelectorAll('.page-option').forEach(option => {
+    option.addEventListener('click', () => {
+        option.classList.toggle('selected');
+    });
+});
+
+
+    </script>
+</body>
+</html>
