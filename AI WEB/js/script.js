@@ -74,3 +74,19 @@ Back4.onclick = function(){
     progress.style.width = "368px";
     
 }
+
+// Code for the Color selection 
+// This code makes sure that the user can only select 1 Color Set
+document.addEventListener('DOMContentLoaded', function() {
+    const pageOptions = document.querySelectorAll('.page-option');
+
+    pageOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            // Remove 'selected' class from all page options
+            pageOptions.forEach(opt => opt.classList.remove('selected'));
+
+            // Add 'selected' class to the clicked option
+            this.classList.add('selected');
+        });
+    });
+});

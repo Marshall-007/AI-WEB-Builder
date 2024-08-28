@@ -6,7 +6,7 @@
 
 body{ 
 /* Here we set our background  */
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),url(bgImage.jpg);
+    background-image: url('../img/PageSelect/bg.jpg');
     background-position: center;
     background-size: cover;
 
@@ -21,7 +21,7 @@ body{
     background: #fff;
     border-radius: 5px;
     position: relative;
-overflow: hidden;
+    overflow: hidden;
 
 }
 
@@ -151,6 +151,31 @@ form button{
 .page-option.selected .checkmark {
     opacity: 1;
 }
+/* This section is for the Color selection Form*/
+.tick {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid #095e0d; /* Green color for the tick border */
+    border-radius: 50%; /* Makes the tick circle-shaped */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /*Set Tick Hidden by default */
+}
+
+.tick::before {
+    content: '✔';
+    color: #095e0d; /* Green color for the tick */
+    font-size: 16px;
+}
+
+.page-option.selected .tick {
+    opacity: 1; /* Show the tick when the image is selected */
+}
 
 /* We will have to move all forms to the left so that
 they slide to the right as the user progresses*/
@@ -183,7 +208,7 @@ they slide to the right as the user progresses*/
 .step-col{
  width: 120px;
  text-align: center;
- color: #333;
+ color: #000;
  position: relative;
 }
 
@@ -206,4 +231,17 @@ they slide to the right as the user progresses*/
     top: 0;
    
 
+}
+
+/*  Styleing for the Dropdown list   */
+select {
+    margin-top: 10px;
+    width: 260px;
+    background-color: #fff;
+    border: #a2b0b9 2px solid;
+}
+ 
+select>option {
+    height: 25px;
+    background-color: #ffffff;
 }
