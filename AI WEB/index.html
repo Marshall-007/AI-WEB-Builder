@@ -5,6 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Builder</title>
     <link rel = "stylesheet" href = "css/style.css">
+    <!--  in this section we will be adding bootstrap  -->
+ 
+<!-- Select2 CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/css/select2.min.css" rel="stylesheet" />
+
+<!-- jQuery (required for Select2) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Select2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0/js/select2.min.js"></script>
+
+
+
+    
 </head>
 <body>
   <div class="container">
@@ -25,12 +39,15 @@
         <h3> Website Builder</h3>
         <p> What industry is your business</p>
         <div class="box">
-          <select >
-            <option>Accounting</option>
-            <option>Cafe</option>
-            <option>Cleaning</option>
-          </select>
+          <div class="form-group">
+            <select class="form-control select2">
+              <option value="accounting">Accounting</option>
+              <option value="cafe">Cafe</option>
+              <option value="cleaning">Cleaning</option>
+            </select>
+          </div>
         </div>
+        
 
         <div class="btnbox">
           <button type="button" id="Back1">Back</button>
@@ -59,18 +76,18 @@
   <p> Please select your color scheme. </p>
   <div class="box" style="margin-top: 25px;">
 
-    <div id = "image-layout">
-      <div class="page-option" data-page="home">
+    <div id = "color-layout">
+      <div class="color-option" data-page="home">
           <img src="img/ColorSet/Blue.png" alt="Blue" class="page-image">
           <div class="tick"></div>
         
       </div>
-      <div class="page-option" data-page="gallery">
+      <div class="color-option" data-page="gallery">
           <img src="img/ColorSet/Brown.png" alt="Brown Color Set" class="page-image">
           <div class="tick"></div>
          
       </div>
-      <div class="page-option" data-page="contact">
+      <div class="color-option" data-page="contact">
           <img src="img/ColorSet/Red.png" alt="Red Color Set" class="page-image">
           <div class="tick"></div>
        
@@ -98,33 +115,37 @@
 <form id="Form5">
   <h3>Website Builder</h3>
   What pages Would you like to Show. (click on the pages you want)
-  <div id = "image-layout">
-  <div class="page-option" data-page="home">
-      <img src="img/Page selection/Home.png" alt="Home" class="page-image">
-      <div class="checkmark"></div>
-      <label>Home</label>
+  <div id="image-layout">
+    <div class="page-option" data-page="home">
+        <img src="img/PageSelect/Home.png" alt="Home" class="page-image">
+        <div class="checkmark"></div>
+        <label contenteditable="true">Home</label>
+    </div>
+  
+    <div class="page-option" data-page="about">
+        <img src="img/PageSelect/about Us.png" alt="About Us" class="page-image">
+        <div class="checkmark"></div>
+        <label contenteditable="true">About Us</label>
+    </div>
+    
+    <div class="page-option" data-page="projects">
+        <img src="img/PageSelect/projects.png" alt="Projects" class="page-image">
+        <div class="checkmark"></div>
+        <label contenteditable="true">Projects</label>
+    </div>
+  
+    <div class="page-option" data-page="gallery">
+        <img src="img/PageSelect/Gallary.png" alt="Gallery" class="page-image">
+        <div class="checkmark"></div>
+        <label contenteditable="true">Gallery</label>
+    </div>
+  
+    <div class="page-option" data-page="contact">
+        <img src="img/PageSelect/Contact.png" alt="Contact Us" class="page-image">
+        <div class="checkmark"></div>
+        <label contenteditable="true">Contact Us</label>
+    </div>
   </div>
-  <div class="page-option" data-page="gallery">
-      <img src="img/Page selection/Home.png" alt="Gallery" class="page-image">
-      <div class="checkmark"></div>
-      <label>Gallery</label>
-  </div>
-  <div class="page-option" data-page="contact">
-      <img src="img/Page selection/Home.png" alt="Contact Us" class="page-image">
-      <div class="checkmark"></div>
-      <label>Contact Us</label>
-  </div>
-  <div class="page-option" data-page="about">
-      <img src="img/Page selection/Home.png" alt="About Us" class="page-image">
-      <div class="checkmark"></div>
-      <label>About Us</label>
-  </div>
-  <div class="page-option" data-page="projects">
-      <img src="img/Page selection/Home.png" alt="Projects" class="page-image">
-      <div class="checkmark"></div>
-      <label>Projects</label>
-  </div>
-</div>
   <div class="btnbox">
     <button type="button" id="Back4">Back</button>
     <button type="submit" id="">Done</button>

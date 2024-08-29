@@ -2,7 +2,6 @@
 document.querySelectorAll('.page-option').forEach(option => {
     option.addEventListener('click', () => {
         option.classList.toggle('selected');
-        
     });
 });
 // Code for the Next and the Back button 
@@ -78,7 +77,7 @@ Back4.onclick = function(){
 // Code for the Color selection 
 // This code makes sure that the user can only select 1 Color Set
 document.addEventListener('DOMContentLoaded', function() {
-    const pageOptions = document.querySelectorAll('.page-option');
+    const pageOptions = document.querySelectorAll('.color-option');
 
     pageOptions.forEach(option => {
         option.addEventListener('click', function() {
@@ -90,3 +89,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+// This code is for the Searchable DropDown
+  $(document).ready(function() {
+    // Initialize Select2
+    $('.select2').select2({
+      placeholder: 'Select an option',
+      allowClear: true
+    });
+  });
+

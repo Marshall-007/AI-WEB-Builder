@@ -6,14 +6,12 @@
 
 body{ 
 /* Here we set our background  */
-    background-image: url('../img/PageSelect/bg.jpg');
+    background-color: #fff;
     background-position: center;
     background-size: cover;
 
 }
-/* This is where the form will be contained (The white container cover) */
-.container{
-
+.container {
     width: 460px;
     height: 500px;
     margin: 8% auto;
@@ -22,8 +20,9 @@ body{
     border-radius: 5px;
     position: relative;
     overflow: hidden;
-
+    box-shadow: 3px 10px 16px rgba(0, 0, 0, 0.247); /* Horizontal offset, Vertical offset, Blur radius, Shadow color */
 }
+
 
 h3{
     text-align: center;
@@ -64,7 +63,7 @@ form button{
     width: 110px;
     height: 35px;
     margin: 0 10px;
-    background: linear-gradient(to right, #2834dd,#019c54);
+    background: linear-gradient(to right, #0c0b0a,#970404);
     border-radius: 30px;
     border: 0;
     outline: none;
@@ -97,6 +96,33 @@ form button{
     justify-content: center;
    
 }
+/* This is for the color selections  */
+#color-layout{
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    gap: 10px;
+    justify-content: center;
+   
+}
+
+.color-option {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.color-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
 
 .page-option {
     position: relative;
@@ -134,7 +160,7 @@ form button{
     width: 20px;
     height: 20px;
     background-color: transparent;
-    border: 2px solid lightblue;
+    border: 2px solid #970404;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -144,11 +170,15 @@ form button{
 
 .checkmark::before {
     content: '✔';
-    color: lightblue;
+    color: #970404;
     font-size: 16px;
 }
 
 .page-option.selected .checkmark {
+    opacity: 1;
+}
+
+.color-option.selected .checkmark {
     opacity: 1;
 }
 /* This section is for the Color selection Form*/
@@ -159,7 +189,7 @@ form button{
     width: 20px;
     height: 20px;
     background-color: transparent;
-    border: 2px solid #095e0d; /* Green color for the tick border */
+    border: 2px solid #970404; /* Green color for the tick border */
     border-radius: 50%; /* Makes the tick circle-shaped */
     display: flex;
     align-items: center;
@@ -169,11 +199,11 @@ form button{
 
 .tick::before {
     content: '✔';
-    color: #095e0d; /* Green color for the tick */
+    color: #970404; /* Green color for the tick */
     font-size: 16px;
 }
 
-.page-option.selected .tick {
+.color-option.selected .tick {
     opacity: 1; /* Show the tick when the image is selected */
 }
 
@@ -208,7 +238,8 @@ they slide to the right as the user progresses*/
 .step-col{
  width: 120px;
  text-align: center;
- color: #000;
+ font-size: 18px;
+ color: #fff;
  position: relative;
 }
 
@@ -217,14 +248,14 @@ they slide to the right as the user progresses*/
     height: 100%;
     /* Here i uses 92 to divide the 460 into 5 parts. */
     width: 92px;
-    background: linear-gradient(to right, #2833c1,#019c54);
+    background: linear-gradient(to right, #0c0b0a,#970404);
     transition: 1s;
 }
 #progress::after{
     content: '';
     height: 40px; /* Adjust to match your progress bar height */
     width: 20px; /* Adjust for the round effect */
-    background-color: #019c54;
+    background-color: #970404;
     border-radius: 0 20px 20px 0; /* Rounds the right corners */
     position: absolute;
     left: 100%; /* Position it at the end of the progress bar */
@@ -234,14 +265,43 @@ they slide to the right as the user progresses*/
 }
 
 /*  Styleing for the Dropdown list   */
-select {
+select{
     margin-top: 10px;
     width: 260px;
     background-color: #fff;
     border: #a2b0b9 2px solid;
 }
  
-select>option {
+select>option{
     height: 25px;
     background-color: #ffffff;
+}
+/*  This is the labaleing for the Page selection on the last form. */
+label[contenteditable="true"] {
+    font-size: 12px; /* Adjust the size as needed */
+    font-weight: bold; /* Optional: makes the text bold */
+    color: #ffffff; /* Optional: sets the text color */
+    border: 1px solid transparent; /* Optional: adds a border if needed */
+    padding: 2px; /* Optional: adds padding */
+    display: inline-block; /* Keeps the label inline but allows styling */
+}
+
+label[contenteditable="true"]:focus {
+    border: 1px solid #000; /* Optional: adds a border on focus for better visibility */
+    outline: none; /* Removes default focus outline */
+}
+/*  This is for the Dropdown (Select Tag)  */
+/* Customize Select2 appearance */
+.select2-container--default .select2-selection--single {
+    border-radius: 0.25rem; /* Adjust border-radius */
+    border: 1px solid #ced4da; /* Custom border color */
+    height: calc(2.25rem + 2px); /* Adjust height */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 1.5; /* Adjust line-height */
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: calc(2.25rem + 2px); /* Adjust height */
 }
