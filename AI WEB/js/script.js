@@ -25,6 +25,9 @@ var Back4 = document.getElementById("Back4");
 
 var progress = document.getElementById("progress")
 
+// readjust the card 
+var card = document.getElementById("card")
+
 // A click listener for the Next button in Form 1
 Next1.onclick = function(){
     Form1.style.left = "-480px";
@@ -41,24 +44,28 @@ Next2.onclick = function(){
     Form2.style.left = "-480px";
     Form3.style.left = "80px";
     progress.style.width = "276px";
+    card.style.height = "590px";
 }
 
 Back2.onclick = function(){
     Form2.style.left = "80px";
     Form3.style.left = "480px";
     progress.style.width = "184px";
+    card.style.height = "500px";
 }
 //  Next and back button for Form 3 and 4. 
 Next3.onclick = function(){
     Form3.style.left = "-480px";
     Form4.style.left = "80px";
     progress.style.width = "368px";
+    card.style.height = "500px";
 }
 
 Back3.onclick = function(){
     Form3.style.left = "80px";
     Form4.style.left = "480px";
     progress.style.width = "276px";
+    card.style.height = "590px";
 }
 //  Next and back button for Form 4 and 5. 
 Next4.onclick = function(){
@@ -91,11 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // This code is for the Searchable DropDown
-  $(document).ready(function() {
-    // Initialize Select2
-    $('.select2').select2({
-      placeholder: 'Select an option',
-      allowClear: true
-    });
-  });
+$(document).ready(function() {
+    $('.selectpicker').selectpicker();
+});
 
+ 

@@ -14,13 +14,14 @@ body{
 .container {
     width: 460px;
     height: 500px;
-    margin: 8% auto;
-    margin-top: 10% auto;
+    margin: 5% auto;
+    padding-left: 2px; 
     background: #fff;
     border-radius: 5px;
     position: relative;
     overflow: hidden;
-    box-shadow: 3px 10px 16px rgba(0, 0, 0, 0.247); /* Horizontal offset, Vertical offset, Blur radius, Shadow color */
+    box-shadow: 3px 10px 16px rgba(0, 0, 0, 0.247);
+    transition: 0.8s; 
 }
 
 
@@ -59,17 +60,7 @@ form input{
     text-align: center;
 
 }
-form button{
-    width: 110px;
-    height: 35px;
-    margin: 0 10px;
-    background: linear-gradient(to right, #0c0b0a,#970404);
-    border-radius: 30px;
-    border: 0;
-    outline: none;
-    color: #fff;
-    cursor: pointer;
-}
+
 /*  Styleing for the Color scheme section of the code  */
 .column {
     float: left;
@@ -278,30 +269,48 @@ select>option{
 }
 /*  This is the labaleing for the Page selection on the last form. */
 label[contenteditable="true"] {
-    font-size: 12px; /* Adjust the size as needed */
-    font-weight: bold; /* Optional: makes the text bold */
-    color: #ffffff; /* Optional: sets the text color */
-    border: 1px solid transparent; /* Optional: adds a border if needed */
-    padding: 2px; /* Optional: adds padding */
-    display: inline-block; /* Keeps the label inline but allows styling */
+    font-size: 12px; 
+    font-weight: bold; 
+    color: #ffffff; 
+    border: 1px solid transparent; 
+    padding: 2px; 
+    display: inline-block; 
 }
 
 label[contenteditable="true"]:focus {
     border: 1px solid #000; /* Optional: adds a border on focus for better visibility */
     outline: none; /* Removes default focus outline */
 }
-/*  This is for the Dropdown (Select Tag)  */
-/* Customize Select2 appearance */
-.select2-container--default .select2-selection--single {
-    border-radius: 0.25rem; /* Adjust border-radius */
-    border: 1px solid #ced4da; /* Custom border color */
-    height: calc(2.25rem + 2px); /* Adjust height */
+/*  This is the styling for the Dropdown select tag   */
+/* Override button styles for selectpicker */
+button.btn.dropdown-toggle {
+    background-color: white !important; 
+    color: black !important;            
+    border: 1px solid #ced4da !important; 
+    padding: 5px !important;          
+    box-shadow: none !important;        
 }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-    line-height: 1.5; /* Adjust line-height */
-}
+/* Prevent your custom button styles from applying to the selectpicker */
+button:not(.dropdown-toggle) {
+    /* This code is for the REST of the buttons in the site thats not select */
+    /* Tried to do it separately but the styling was affecting the search dropdown by adding the same color*/
+        width: 110px;
+        height: 35px;
+        margin: 0 10px;
+        background: linear-gradient(to right, #0c0b0a,#970404);
+        border-radius: 30px;
+        border: 0;
+        outline: none;
+        color: #fff;
+        cursor: pointer;
+    }
 
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-    height: calc(2.25rem + 2px); /* Adjust height */
+
+
+/* Additional custom styling for the dropdown menu */
+.bootstrap-select .dropdown-menu {
+    max-height: 200px;  /* Limit the height of the dropdown */
+    overflow-y: auto;   /* Add scrollbar if necessary */
+    background-color: white;
 }
